@@ -1,6 +1,6 @@
 {
   "name": "holidaysrd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "holidayRD es una libreria que te permite validar si una fecha es feriado en la Republica Dominicana",
   "main": "dist/holidayRD.js",
   "scripts": {

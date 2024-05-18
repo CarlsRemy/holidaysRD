@@ -97,6 +97,7 @@ console.log(longWeekends);
 ```
 
 **getLongWeekendsOfMonth(date: Date): holidayRD[]**
+
 Lista de Fines de semana largo en el mes del año indicado.
 ```js
 const monthLongWeekends = getLongWeekendsOfMonth(new Date(2023, 0)); // Enero 2023
