@@ -1,0 +1,29 @@
+{
+  "name": "holidaysrd",
+  "version": "0.0.1",
+  "description": "holidayRD es una libreria que te permite validar si una fecha es feriado en la Republica Dominicana",
+  "main": "dist/holidayRD.js",
+  "scripts": {
+    "build": "tsc && terser dist/*.js --compress --mangle --output dist/holidaysRD.min.js && terser dist/utils/*.js --compress --mangle --output dist/utils/helper.min.js",
+    "test": "ts-mocha test/*",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "holiday RD",
+    "dias Feriados",
+    "Republica Dominicana",
+    "validacion de citas"
+  ],
+  "author": "Carlos Ismael .Y .R",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.5.8",
+    "chai": "^4.3.8",
+    "clipboardy": "^3.0.0",
+    "mocha": "^10.2.0",
+    "terser": "^5.31.0",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
