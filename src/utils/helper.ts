@@ -11,16 +11,19 @@ export function getDateOfDay(year: number, day: number): string {
 	return formatDate(fecha);
 }
 
+/**
+ * Retorn al nombre del dia del objeto de fecha
+ * 
+ * @param {Date} date - Objeto actual
+ * @returns {string} - El nombre del objeto en espaniol
+ */
 export function getDayName(date: Date): string {
-	switch (date.getUTCDay()) {
-		case 0: return "domingo";
-		case 1: return "lunes";
-		case 2: return "martes";
-		case 3: return "miércoles";
-		case 4: return "jueves";
-		case 5: return "viernes";
-		default: return "sábado";
-	}
+    if (!(date instanceof Date) || isNaN(date.getTime())) {
+        throw new Error("Invalid date");
+    }
+
+    const dayNames = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+    return dayNames[date.getUTCDay()];
 }
 
 export function isDayLongWeekend(day: string): boolean {
